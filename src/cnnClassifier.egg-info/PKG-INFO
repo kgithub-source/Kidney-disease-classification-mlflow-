@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A CNN App
+Home-page: https://github.com/kgithub-source/Kidney-disease-classification-mlflow
+Author: kgithub-source
+Author-email: kedar.tvd3@gmail.com
+Project-URL: Bug Tracker, https://github.com/kgithub-source/Kidney-disease-classification-mlflow/issues
+Description-Content-Type: text/markdown
