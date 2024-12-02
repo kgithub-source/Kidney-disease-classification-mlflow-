@@ -63,3 +63,7 @@ print("Test score:", score[0])
 print("Test accuracy:", score[1])
 #with mlflow.start_run() as run:
     #mlflow.keras.log_model(model, "Model")
+
+
+
+"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"

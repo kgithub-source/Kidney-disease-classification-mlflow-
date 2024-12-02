@@ -14,5 +14,7 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
+notebook
 gdown
+uvicorn[standard]
 -e .
