@@ -1,0 +1,43 @@
+name: workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  integration:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Lint code
+        run: echo "Linting repository"
+
+      - name: Run unit tests
+        run: echo "Running unit tests"
+          
+
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Add remote 
+        env:
+          HF: ${{ secrets.HF }}
+        run: git remote add space huggingface.co/spaces/kedartvd3/kidney094
+      - name: Push to hub
+        env:
+          HF: ${{ secrets.HF }}
+        run: git push https://kedartvd3:$HF@huggingface.co/spaces/kedartvd3/kidney094 main --force
+      
